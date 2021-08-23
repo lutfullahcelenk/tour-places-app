@@ -1,0 +1,49 @@
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.cards{
+    padding: 1.25rem;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.title{
+    color: white;
+    font-family: "Amatic SC",cursive;
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.cards img{
+    object-fit: cover;
+    height: 350px;
+    width: 500px;
+    filter: grayscale(0%);
+}
+
+.cards img:hover{
+    filter: grayscale(100%);
+}
+
+.card-over{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    transform: translateY(100%) ;
+    transition: transfrom 1s ease-in-out;
+}
+
+.cards:hover .card-over{
+    transform: translateY(0%);
+}
